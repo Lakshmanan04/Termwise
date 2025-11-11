@@ -15,7 +15,7 @@ GEMINI_API_KEY = st.secrets["API_KEY"]
 st.set_page_config(page_title="Termwise", layout="wide")
 st.title("🧾 Termwise: Understand What You're Agreeing To")
 
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=GEMINI_API_KEY, temperature=0.7)
+llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", google_api_key=GEMINI_API_KEY, temperature=0.7)
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=GEMINI_API_KEY)
 
 def extract_text_from_pdf(file):
